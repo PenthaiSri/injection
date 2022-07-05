@@ -1,0 +1,136 @@
+!SESSION 2022-07-05 19:55:19.146 -----------------------------------------------
+eclipse.buildId=4.15.0.I20200305-0155
+java.version=1.8.0_281
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-07-05 19:55:29.790
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Penthai'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2022-07-05 21:30:42.705
+!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:764)
+	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:543)
+	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:515)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:1976)
+	at org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsLabelProvider.lambda$2(NestedProjectsLabelProvider.java:87)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(Unknown Source)
+	at java.util.concurrent.ForkJoinTask.doExec(Unknown Source)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(Unknown Source)
+	at java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)
+	at java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)
+
+!ENTRY org.eclipse.egit.core 4 0 2022-07-05 21:52:54.925
+!MESSAGE An exception occurred during push on URI https://github.com/PenthaiSri/injection.git: https://github.com/PenthaiSri/injection.git: not authorized
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://github.com/PenthaiSri/injection.git: not authorized
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:147)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:217)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/PenthaiSri/injection.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:538)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:434)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:127)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1335)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:137)
+	... 4 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2022-07-05 21:52:54.926
+!MESSAGE Can't connect to any repository: https://github.com/PenthaiSri/injection.git (https://github.com/PenthaiSri/injection.git: not authorized)
+
+!ENTRY org.eclipse.egit.core 4 0 2022-07-05 22:05:33.352
+!MESSAGE An exception occurred during push on URI https://github.com/PenthaiSri/injection.git: https://github.com/PenthaiSri/injection.git: not authorized
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://github.com/PenthaiSri/injection.git: not authorized
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:147)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:217)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/PenthaiSri/injection.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:538)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:434)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:127)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1335)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:137)
+	... 4 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2022-07-05 22:05:33.355
+!MESSAGE Can't connect to any repository: https://github.com/PenthaiSri/injection.git (https://github.com/PenthaiSri/injection.git: not authorized)
+
+!ENTRY org.eclipse.egit.core 4 0 2022-07-05 22:06:21.823
+!MESSAGE An exception occurred during push on URI https://github.com/PenthaiSri/injection.git: https://github.com/PenthaiSri/injection.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/PenthaiSri/injection.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:538)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:434)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:127)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1335)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:191)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:211)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.equinox.security 1 0 2022-07-05 22:08:13.141
+!MESSAGE New keyring password generated. 
+
+!ENTRY org.eclipse.egit.core 4 0 2022-07-05 22:08:17.113
+!MESSAGE An exception occurred during push on URI https://github.com/PenthaiSri/injection.git: https://github.com/PenthaiSri/injection.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/PenthaiSri/injection.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:538)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:434)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:127)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1335)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:191)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:211)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.egit.core 4 0 2022-07-05 22:11:37.352
+!MESSAGE An exception occurred during push on URI https://github.com/PenthaiSri/injection.git: https://github.com/PenthaiSri/injection.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/PenthaiSri/injection.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:538)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:434)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:127)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1335)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:191)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:211)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.egit.core 4 0 2022-07-05 22:15:00.356
+!MESSAGE An exception occurred during push on URI https://github.com/PenthaiSri/injection.git: https://github.com/PenthaiSri/injection.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/PenthaiSri/injection.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:538)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:434)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:127)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1335)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:191)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:211)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.egit.core 4 0 2022-07-05 22:15:15.037
+!MESSAGE An exception occurred during push on URI https://github.com/PenthaiSri/injection.git: https://github.com/PenthaiSri/injection.git: git-receive-pack not permitted on 'https://github.com/PenthaiSri/injection.git/'
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/PenthaiSri/injection.git: git-receive-pack not permitted on 'https://github.com/PenthaiSri/injection.git/'
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:545)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:434)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:127)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1335)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:191)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:211)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)

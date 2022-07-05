@@ -1,0 +1,94 @@
+// Imports
+import java.sql.Connection;
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.mysql.cj.protocol.Resultset;
+import com.mysql.cj.xdevapi.Statement;
+
+public class Requetes {
+	
+	// Variables permettant la connexion
+	static String URL = "jdbc:mysql://localhost:3306/jdbc";
+	static String USER = "root";
+	static String PASSWORD = "";
+	
+	/**
+	 * Method select
+	 * @param column colonnes à récupérer
+	 * @param tabName nom de la table
+	 */
+	public static void select(String column, String tabName) {
+		Connection conn = null;
+		try {
+			// Charge la classe du driver
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			// CrÃ©ee la connexion
+			conn = DriverManager.getConnection(URL, USER, PASSWORD);
+			System.out.println("Connexion a la BDD reussie !");
+			try {
+				// Requete SQL
+				String Select = "SELECT usr_id, "+column+" FROM "+tabName+";";
+				ResultSet rst;
+				java.sql.Statement stmt = conn.createStatement();
+				rst = stmt.executeQuery(Select);
+				System.out.println("Execution de la requete !");
+				while(rst.next()) {
+					System.out.println(rst.getString("usr_id") + " " +
+							rst.getString("usr_firstname") + " " +
+							rst.getString("usr_lastname"));
+				}
+				// Ferme la connexion
+				rst.close();
+				stmt.close();
+			}
+			catch(Exception e) {
+				System.out.println(e);
+				System.err.println("Erreur de requete !");
+			}
+			conn.close();
+		}
+		catch(Exception e) {
+			System.out.println(e);
+			System.err.println("Erreur de connexion a la BDD");
+		}
+	}
+
+	/**
+	 * Method createTable
+	 * 
+	 * @param tabName nom de la table
+	 * @param param	colonnes à créer avec leurs contraintes
+	 */
+	public static void createTable(String tabName, String param) {
+		Connection conn = null;
+		try {
+			// Charge la classe du driver
+			Class.forName("com.mysql.cj.jdbc.Driver");
+
+			// CrÃ©er la connexion
+			conn = DriverManager.getConnection(URL, USER, PASSWORD);
+			System.out.println("Connexion a la BDD reussie !");
+			try {
+				String Create = "CREATE TABLE "+tabName+"("+param+");";
+				int rst;
+				java.sql.Statement stmt = conn.createStatement();
+				rst = stmt.executeUpdate(Create);
+				System.out.println("Execution de la requete !");
+
+				// Ferme les connexions
+				stmt.close();
+			} catch (Exception e) {
+				System.out.println(e);
+				System.err.println("Erreur de requete !");
+			}
+			conn.close();
+		} catch (Exception e) {
+			System.out.println(e);
+			System.err.println("Erreur de connexion a la BDD !");
+		}
+	}
+	
+}
